@@ -1,5 +1,8 @@
 package org.example;
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class PasswordValidatorTest {
@@ -39,5 +42,17 @@ class PasswordValidatorTest {
         //Then
         assertEquals(expected, actual);
 
+    }
+
+    @Test
+    void isCommonPassword() {
+        //Given
+        String password = "12345678";
+        String[] commonPasswords = {"123456", "password", "123456789", "12345678", "qwerty", "abc123", "111111", "123123", "admin", "letmein"};
+        boolean expected = Arrays.asList(commonPasswords).contains(password);
+        //When
+        boolean actual = PasswordValidator.isCommonPassword(password);
+        //Then
+        assertEquals(expected, actual);
     }
 }

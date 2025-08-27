@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Arrays;
+
 public class PasswordValidator {
 
     public static void main(String[] args) {}
@@ -43,6 +45,7 @@ public class PasswordValidator {
 
 
     public static boolean isCommonPassword(String password) {
-        return false; // stub für Red-Phase
+        String[] commonPasswords = {"123456", "password", "123456789", "12345678", "qwerty", "abc123", "111111", "123123", "admin", "letmein"};
+        return Arrays.asList(commonPasswords).contains(password);
     }
 }

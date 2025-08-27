@@ -7,7 +7,7 @@ public class PasswordValidator {
     public static void main(String[] args) {}
 
     public static boolean hasMinLength(String password, int min) {
-        if(password!=null && password.length()>=min) {  //erst Nullcheck (Laufzeitfehler vermeiden) dann Mindestslänge
+        if(password!=null || password.isEmpty() || password.length()>=min) {  //erst Nullcheck (Laufzeitfehler vermeiden) dann Mindestslänge
             return true;                          //Bedingungen erfüllt
         }else{
             return false;                        //Bedingungen nicht erfüllt
@@ -41,7 +41,6 @@ public class PasswordValidator {
         }
         return upperCaseFlag && lowerCaseFlag;
     }
-
 
 
     public static boolean isCommonPassword(String password) {

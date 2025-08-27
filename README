@@ -1,0 +1,9 @@
+## Passwort-Policy
+
+Ein gültiges Passwort muss folgende Kriterien erfüllen:
+
+### Basisregeln:
+- Mindestens 8 Zeichen
+- Mindestens eine Ziffer (0–9)
+- Mindestens ein Großbuchstabe und ein Kleinbuchstabe
+- Darf nicht in einer Liste häufiger/schwacher Passwörter vorkommen

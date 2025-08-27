@@ -47,7 +47,7 @@ class PasswordValidatorTest {
     @Test
     void isCommonPassword() {
         //Given
-        String password = "12345678";
+        String password = "WHataboutthat";
         String[] commonPasswords = {"123456", "password", "123456789", "12345678", "qwerty", "abc123", "111111", "123123", "admin", "letmein"};
         boolean expected = Arrays.asList(commonPasswords).contains(password);
         //When

@@ -23,8 +23,24 @@ public class PasswordValidator {
     }
 
     public static boolean containsUpperAndLower(String password) {
-        return false; // stub für Red-Phase
+        char currentCharacter;
+        boolean upperCaseFlag = false;  //Flag Wert setzen
+        boolean lowerCaseFlag = false;
+//        boolean onlyUpperCaseFlag = false;
+//        boolean onlyLowerCaseFlag = false;
+//        boolean onlyDigitFlag = false;
+        for (int i = 0; i < password.length(); i++) {   //Schleife Init, jedes char vom String
+            currentCharacter = password.charAt(i);
+            if (Character.isUpperCase(currentCharacter)) {
+                upperCaseFlag = true;
+            } else if (Character.isLowerCase(currentCharacter)) {
+                lowerCaseFlag = true;
+            }
+        }
+        return upperCaseFlag && lowerCaseFlag;
     }
+
+
 
     public static boolean isCommonPassword(String password) {
         return false; // stub für Red-Phase

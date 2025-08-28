@@ -7,7 +7,7 @@ public class PasswordValidator {
     public static void main(String[] args) {}
 
     public static boolean hasMinLength(String password, int min) {
-        if(password!=null && password.length()>=min) {  //erst Nullcheck (Laufzeitfehler vermeiden) dann Mindestslänge
+        if(password!=null && password.length()>=min) {  //erst Nullcheck (Laufzeitfehler vermeiden),dann leere Eingabe dann Mindestslänge password.isBlank() &&
             return true;                          //Bedingungen erfüllt
         }else{
             return false;                        //Bedingungen nicht erfüllt
@@ -31,7 +31,7 @@ public class PasswordValidator {
 //        boolean onlyUpperCaseFlag = false;
 //        boolean onlyLowerCaseFlag = false;
 //        boolean onlyDigitFlag = false;
-        for (int i = 0; i < password.length(); i++) {   //Schleife Init, jedes char vom String
+        for (int i = 0; i < password.length(); i++) {
             currentCharacter = password.charAt(i);
             if (Character.isUpperCase(currentCharacter)) {
                 upperCaseFlag = true;

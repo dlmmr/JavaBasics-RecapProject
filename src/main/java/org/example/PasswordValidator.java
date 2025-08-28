@@ -6,8 +6,8 @@ public class PasswordValidator {
 
     public static void main(String[] args) {}
 
-    public static boolean hasMinLength(String password, int min) {
-        if(password!=null && password.length()>=min) {  //erst Nullcheck (Laufzeitfehler vermeiden),dann leere Eingabe dann Mindestslänge password.isBlank() &&
+    public static boolean hasMinLength(String password) {
+        if(password!=null && password.length()>=8) {  //erst Nullcheck (Laufzeitfehler vermeiden),dann leere Eingabe dann Mindestslänge password.isBlank() &&
             return true;                          //Bedingungen erfüllt
         }else{
             return false;                        //Bedingungen nicht erfüllt

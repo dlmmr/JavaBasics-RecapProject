@@ -8,11 +8,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class PasswordValidatorTest {
 
     @Test
-    void hasMinLength() {
+    void hasMinLength_hasMinLenght() {
         //Given
         String password = "12345678";
         int min = 8;
         boolean notNull = password != null;
+//        boolean blank = password.isBlank();
         boolean expected = notNull && password.length() >= min;
         //When
         boolean actual = PasswordValidator.hasMinLength(password, min);
@@ -21,7 +22,7 @@ class PasswordValidatorTest {
     }
 
     @Test
-    void containsDigit() {
+    void containsDigit_containsDigit() {
         //Given
         String password = "12345678";
         boolean expected = true;
@@ -33,7 +34,7 @@ class PasswordValidatorTest {
     }
 
     @Test
-    void containsUpperAndLower() {
+    void containsUpperAndLower_containsUpperAndLower() {
         //Given
         String password = "asdF1236";
         boolean expected = true;

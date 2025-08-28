@@ -12,9 +12,7 @@ class PasswordValidatorTest {
         //Given
         String password = "12345678";
         int min = 8;
-        boolean notNull = password != null;
-//        boolean blank = password.isBlank();
-        boolean expected = notNull && password.length() >= min;
+        boolean expected = password.length() >= min;
         //When
         boolean actual = PasswordValidator.hasMinLength(password, min);
         //Then
